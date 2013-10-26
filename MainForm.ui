@@ -1,0 +1,1951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>648</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Cockroach</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="cockroach.qrc">
+    <normaloff>:/icon/cockroach.png</normaloff>:/icon/cockroach.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="C" country="AnyCountry"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>IO</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="title">
+             <string>Memory Access</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="2">
+              <widget class="QLabel" name="labelAddr">
+               <property name="text">
+                <string>Address</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="labelLData">
+               <property name="text">
+                <string>Data</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QComboBox" name="cbMap0"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="cbType0">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLineEdit" name="leAddr0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLineEdit" name="leData0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QPushButton" name="btnRead0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="5">
+              <widget class="QPushButton" name="btnWrite0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QComboBox" name="cbMap1"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QComboBox" name="cbType1">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLineEdit" name="leAddr1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLineEdit" name="leData1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="4">
+              <widget class="QPushButton" name="btnRead1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="5">
+              <widget class="QPushButton" name="btnWrite1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QComboBox" name="cbMap2"/>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="cbType2">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLineEdit" name="leAddr2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLineEdit" name="leData2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="4">
+              <widget class="QPushButton" name="btnRead2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5">
+              <widget class="QPushButton" name="btnWrite2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="6">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="4" column="0">
+              <widget class="QComboBox" name="cbMap3"/>
+             </item>
+             <item row="4" column="1">
+              <widget class="QComboBox" name="cbType3">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QLineEdit" name="leAddr3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QLineEdit" name="leData3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="4">
+              <widget class="QPushButton" name="btnRead3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="5">
+              <widget class="QPushButton" name="btnWrite3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QComboBox" name="cbMap4"/>
+             </item>
+             <item row="5" column="1">
+              <widget class="QComboBox" name="cbType4">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLineEdit" name="leAddr4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QLineEdit" name="leData4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="4">
+              <widget class="QPushButton" name="btnRead4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="5">
+              <widget class="QPushButton" name="btnWrite4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QComboBox" name="cbMap5"/>
+             </item>
+             <item row="6" column="1">
+              <widget class="QComboBox" name="cbType5">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QLineEdit" name="leAddr5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3">
+              <widget class="QLineEdit" name="leData5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="4">
+              <widget class="QPushButton" name="btnRead5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="5">
+              <widget class="QPushButton" name="btnWrite5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QComboBox" name="cbMap6"/>
+             </item>
+             <item row="7" column="1">
+              <widget class="QComboBox" name="cbType6">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="7" column="2">
+              <widget class="QLineEdit" name="leAddr6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="3">
+              <widget class="QLineEdit" name="leData6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="4">
+              <widget class="QPushButton" name="btnRead6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="5">
+              <widget class="QPushButton" name="btnWrite6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QComboBox" name="cbMap7"/>
+             </item>
+             <item row="8" column="1">
+              <widget class="QComboBox" name="cbType7">
+               <item>
+                <property name="text">
+                 <string>default</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>bool</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i8</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>u64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>i64</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f32</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>f64</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QLineEdit" name="leAddr7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>80000000</string>
+               </property>
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="3">
+              <widget class="QLineEdit" name="leData7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Courier New</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="4">
+              <widget class="QPushButton" name="btnRead7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>R</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="5">
+              <widget class="QPushButton" name="btnWrite7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>23</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>W</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="3">
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Map</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Type</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Управление</string>
+         </attribute>
+         <widget class="QPushButton" name="btnFreqReset">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>FreqReset</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>60</y>
+            <width>234</width>
+            <height>56</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Несущая</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLineEdit" name="leFrequency"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnFreqWrite">
+             <property name="text">
+              <string>W</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>120</y>
+            <width>234</width>
+            <height>56</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Дискриминатор</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLineEdit" name="leDiscriminator">
+             <property name="text">
+              <string>840</string>
+             </property>
+             <property name="maxLength">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnDscrWrite">
+             <property name="text">
+              <string>W</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_8">
+         <attribute name="title">
+          <string>ИФК ПТ</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPlainTextEdit" name="teIfcPrs"/>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="teIfcFreq"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_9">
+         <attribute name="title">
+          <string>ИФК ВТ</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QPlainTextEdit" name="teIfcPrsHa"/>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="teIfcFreqHa"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Индикация</string>
+         </attribute>
+         <widget class="QWidget" name="widget_5" native="true">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>151</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="labelPrsLocked">
+                <property name="autoFillBackground">
+                 <bool>true</bool>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string>p</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelFreqLocked">
+                <property name="autoFillBackground">
+                 <bool>true</bool>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string>f</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="pbRange">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="pbSnr">
+             <property name="maximum">
+              <number>30</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="textDirection">
+              <enum>QProgressBar::TopToBottom</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QNavWidget" name="navWidget">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>0</y>
+            <width>361</width>
+            <height>311</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="interactive">
+           <bool>false</bool>
+          </property>
+          <property name="valueAmpR">
+           <double>0.600000023841858</double>
+          </property>
+          <property name="strings">
+           <stringlist>
+            <string>ololo</string>
+            <string>0</string>
+           </stringlist>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>160</y>
+            <width>171</width>
+            <height>65</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Информация</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="labelInfSa">
+             <property name="text">
+              <string>Index Sa:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelInfHa">
+             <property name="text">
+              <string>Index Ha:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="widget_4" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget_6" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_22">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPlainTextEdit" name="teLog">
+              <property name="locale">
+               <locale language="C" country="AnyCountry"/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBar">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+              <property name="textVisible">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_7">
+           <property name="title">
+            <string>Усиление</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <spacer name="verticalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdGain">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(0, 255, 0);
+background-color: rgb(0, 0, 0);</string>
+              </property>
+              <property name="locale">
+               <locale language="C" country="AnyCountry"/>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="digitCount">
+               <number>2</number>
+              </property>
+              <property name="mode">
+               <enum>QLCDNumber::Hex</enum>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>192</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDial" name="dialGain">
+              <property name="maximum">
+               <number>127</number>
+              </property>
+              <property name="pageStep">
+               <number>8</number>
+              </property>
+              <property name="sliderPosition">
+               <number>64</number>
+              </property>
+              <property name="notchTarget">
+               <double>4.000000000000000</double>
+              </property>
+              <property name="notchesVisible">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnGain">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Большое</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Inf</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QPushButton" name="btnWriteAll">
+              <property name="text">
+               <string>WA</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTime">
+              <property name="text">
+               <string>0000</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnSaveMeasure">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Save</string>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnClearMeasure">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Clear</string>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>Dbg channel:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sbChannelIndex">
+              <property name="maximum">
+               <number>7</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelCsError">
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnShowInf">
+              <property name="text">
+               <string>Inf</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_3" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QSpinBox" name="sbDevice"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnConnect">
+              <property name="text">
+               <string>Connect</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnPlot">
+              <property name="text">
+               <string>Plot</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnOpenIni">
+              <property name="text">
+               <string>Profile</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnReloadIni">
+              <property name="text">
+               <string>Reload</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnSaveIni">
+              <property name="text">
+               <string>Save</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Plot channel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sbDbgPlotIndex"/>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QNavWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>QNavWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>leAddr0</tabstop>
+  <tabstop>leData0</tabstop>
+  <tabstop>btnRead0</tabstop>
+  <tabstop>btnWrite0</tabstop>
+  <tabstop>leAddr1</tabstop>
+  <tabstop>leData1</tabstop>
+  <tabstop>btnRead1</tabstop>
+  <tabstop>btnWrite1</tabstop>
+  <tabstop>leAddr2</tabstop>
+  <tabstop>leData2</tabstop>
+  <tabstop>btnRead2</tabstop>
+  <tabstop>btnWrite2</tabstop>
+  <tabstop>leAddr3</tabstop>
+  <tabstop>leData3</tabstop>
+  <tabstop>btnRead3</tabstop>
+  <tabstop>btnWrite3</tabstop>
+  <tabstop>leAddr4</tabstop>
+  <tabstop>leData4</tabstop>
+  <tabstop>btnRead4</tabstop>
+  <tabstop>btnWrite4</tabstop>
+  <tabstop>leAddr5</tabstop>
+  <tabstop>leData5</tabstop>
+  <tabstop>btnRead5</tabstop>
+  <tabstop>btnWrite5</tabstop>
+  <tabstop>leAddr6</tabstop>
+  <tabstop>leData6</tabstop>
+  <tabstop>btnRead6</tabstop>
+  <tabstop>btnWrite6</tabstop>
+  <tabstop>leAddr7</tabstop>
+  <tabstop>leData7</tabstop>
+  <tabstop>btnRead7</tabstop>
+  <tabstop>btnWrite7</tabstop>
+ </tabstops>
+ <resources>
+  <include location="cockroach.qrc"/>
+ </resources>
+ <connections/>
+</ui>
